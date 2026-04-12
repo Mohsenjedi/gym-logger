@@ -1,0 +1,48 @@
+{
+  "name": "gym-logger2",
+  "version": "1.0.0",
+  "description": "A minimal, mobile-first gym logging web app designed for speed and simplicity. Built with **Next.js 15** and **Firebase Firestore**, it allows you to log your workouts in seconds without any friction.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mohsenjedi/gym-logger.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/Mohsenjedi/gym-logger/issues"
+  },
+  "homepage": "https://github.com/Mohsenjedi/gym-logger#readme",
+  "dependencies": {
+    "clsx": "^2.1.1",
+    "firebase": "^12.12.0",
+    "framer-motion": "^12.38.0",
+    "lucide-react": "^1.8.0",
+    "next": "^16.2.3",
+    "react": "^19.2.5",
+    "react-dom": "^19.2.5",
+    "tailwind-merge": "^3.5.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.29.0",
+    "@babel/preset-react": "^7.28.5",
+    "@tailwindcss/postcss": "^4.2.2",
+    "@types/node": "^25.6.0",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "babel-plugin-react-compiler": "^1.0.0",
+    "eslint": "^9.39.4",
+    "eslint-config-next": "^16.2.3",
+    "postcss": "^8.5.9",
+    "tailwindcss": "^4.0.0",
+    "typescript": "^6.0.2"
+  }
+}

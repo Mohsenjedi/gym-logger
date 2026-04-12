@@ -9,7 +9,7 @@ import { clsx } from "clsx";
 
 export default function HistoryPage() {
   const { user } = useAuth();
-  const [workouts, setWorkouts] = useState<Workout[]>(null || []);
+  const [workouts, setWorkouts] = useState<Workout[]>([]);
   const [loading, setLoading] = useState(true);
 
   const fetchData = async () => {

@@ -119,3 +119,7 @@ export const saveTemplate = async (userId: string, name: string, entries: any[])
 export const deleteTemplate = async (userId: string, templateId: string) => {
   await deleteDoc(doc(db, `users/${userId}/templates`, templateId));
 };
+export const completeWorkout = async (userId: string, workoutId: string) => {
+  const ref = doc(db, `users/${userId}/workouts`, workoutId);
+  await updateDoc(ref, { completed: true });
+};

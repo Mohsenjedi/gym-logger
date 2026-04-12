@@ -109,13 +109,10 @@ function FinishButton({ workoutId, onFinished }: { workoutId: string, onFinished
 
     if (!user) return;
     setLoading(true);
-    // Explicitly update completed status in Firestore
-    import("@/lib/firestore").then(async ({ updateDoc, doc, db }) => {
-      const ref = doc(db, `users/${user.uid}/workouts`, workoutId);
-      await updateDoc(ref, { completed: true });
-      onFinished();
-      setLoading(false);
-    });
+    const { completeWorkout } = await import("@/lib/firestore");
+    await completeWorkout(user.uid, workoutId);
+    onFinished();
+    setLoading(false);
   };
 
   return (

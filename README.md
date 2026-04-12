@@ -23,10 +23,27 @@ A minimal, mobile-first gym logging web app designed for speed and simplicity. B
 
 ---
 
+## 📊 Data Model
+
+### Firestore Collection: `workouts`
+```
+workouts/{workoutId}
+  ├── date: Timestamp
+  ├── entries: [
+  │     {
+  │       movement: string      // e.g. "Bench Press"
+  │       reps: number          // e.g. 8
+  │       weight: number        // e.g. 80 (in kg)
+  │     }
+  │   ]
+  └── createdAt: Timestamp
+```
+
+---
+
 ## 📦 Getting Started
 
 ### Prerequisites
-
 - Node.js 18+ 
 - A Firebase Project
 
@@ -44,7 +61,7 @@ A minimal, mobile-first gym logging web app designed for speed and simplicity. B
    ```
 
 3. **Set up Environment Variables**:
-   Create a `.env.local` file in the root directory and add your Firebase configuration:
+   Create a `.env.local` file in the root directory:
    ```env
    NEXT_PUBLIC_FIREBASE_API_KEY=your_api_key
    NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=your_project.firebaseapp.com
@@ -54,33 +71,25 @@ A minimal, mobile-first gym logging web app designed for speed and simplicity. B
    NEXT_PUBLIC_FIREBASE_APP_ID=your_app_id
    ```
 
-4. **Run the development server**:
+4. **Run development**:
    ```bash
    npm run dev
    ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 ---
 
 ## 🏗️ Project Structure
 
-- `src/app/`: The main application pages and layouts.
-- `src/components/`: Reusable UI components like `WorkoutForm` and `WorkoutList`.
-- `src/lib/`: Firebase configuration and helper functions.
-- `src/types/`: TypeScript interfaces and types.
-
----
-
-## 🛡️ Security Rules
-
-Development rules are set to `allow read, write: if true`. Ensure you lock these down with Firebase Authentication before moving to a public production environment.
+- `src/app/`: App Router pages and layouts.
+- `src/components/`: Reusable UI components.
+- `src/lib/`: Firebase config & helpers.
+- `src/types/`: TypeScript definitions.
 
 ---
 
 ## 📝 License
 
-This project is open-source. Feel free to fork it and make it your own!
+Open-source under the MIT License. Feel free to use and modify!
 
 ---
 
